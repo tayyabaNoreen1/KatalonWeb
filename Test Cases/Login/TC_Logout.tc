@@ -5,4 +5,30 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>64462327-03b4-4465-ba6b-1bb0ce26f31d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>aac62bb7-cd1a-4a14-a2f6-f764ff9c9428</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>22507ac3-c3bf-49bb-a3b7-875043fbc01d</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>findTestObject('UpdateUser/option_logout')</defaultValue>
+      <description></description>
+      <id>aac62bb7-cd1a-4a14-a2f6-f764ff9c9428</id>
+      <masked>false</masked>
+      <name>option_logout</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Logout/success_logout')</defaultValue>
+      <description></description>
+      <id>22507ac3-c3bf-49bb-a3b7-875043fbc01d</id>
+      <masked>false</masked>
+      <name>success_logout</name>
+   </variable>
 </TestCaseEntity>
