@@ -16,4 +16,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+//Check logout flow
+condition_logoutPresent = WebUI.verifyElementPresent(option_logout, 0, FailureHandling.OPTIONAL)
+if(condition_logoutPresent) {
+	KeywordUtil.logInfo('Logout option is present.')
+	WebUI.scrollToElement(option_logout, 5, FailureHandling.OPTIONAL)
+	WebUI.click(option_logout)
+	condition_logoutSuccess = WebUI.waitForElementVisible(success_logout, 10, FailureHandling.OPTIONAL)
+	if(condition_logoutSuccess)
+		KeywordUtil.markPassed('User is logged out successfully.')
+	else
+		KeywordUtil.markFailedAndStop('Logout failed.')
+}
+else
+	KeywordUtil.markFailedAndStop('Logout option is not present.')
 
