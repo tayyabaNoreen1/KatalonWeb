@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_MegaMenu</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fadf17f8-3ea3-4bc3-8c7d-277615ef55be</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2261b59b-5104-490e-a106-b82fe2b3f177</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0c3de3ba-fac5-429b-929c-49d47c9570f6</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>a241abe9-52fb-44dc-96a3-bfcb62121cf1</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/MegaMenuButton')</defaultValue>
+      <description></description>
+      <id>2261b59b-5104-490e-a106-b82fe2b3f177</id>
+      <masked>false</masked>
+      <name>menu_MegaMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/MegaMenuOptions')</defaultValue>
+      <description></description>
+      <id>0c3de3ba-fac5-429b-929c-49d47c9570f6</id>
+      <masked>false</masked>
+      <name>list_MegaMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>a241abe9-52fb-44dc-96a3-bfcb62121cf1</id>
+      <masked>false</masked>
+      <name>x</name>
+   </variable>
+</TestCaseEntity>
