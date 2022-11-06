@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC_AddToCart</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1bfe8d8f-3bec-4a1e-8e17-d0383a1de86d</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>980f1150-7bc9-40db-b324-d18b976210c1</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>028dfa17-5217-437f-afa1-8e119c6730a5</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>516f4369-5e4a-45d1-b201-66d94fa8296d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>cbc6b592-c99e-4314-a749-a4840eb6e576</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1ef00140-8ee7-4dd1-8b24-11ddf7027f26</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>d596f2ba-f99a-4be2-84d6-e10f5d889f91</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7a8b52c7-292b-4311-bd7f-677009964754</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>099eb366-ec14-4e76-a200-0677bdf66c80</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/MegaMenuButton')</defaultValue>
+      <description></description>
+      <id>980f1150-7bc9-40db-b324-d18b976210c1</id>
+      <masked>false</masked>
+      <name>menu_MegaMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/menuOption_Apple')</defaultValue>
+      <description></description>
+      <id>028dfa17-5217-437f-afa1-8e119c6730a5</id>
+      <masked>false</masked>
+      <name>menuOption_Apple</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/page_Apple')</defaultValue>
+      <description></description>
+      <id>516f4369-5e4a-45d1-b201-66d94fa8296d</id>
+      <masked>false</masked>
+      <name>page_Apple</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/items_AppleTitle')</defaultValue>
+      <description></description>
+      <id>cbc6b592-c99e-4314-a749-a4840eb6e576</id>
+      <masked>false</masked>
+      <name>items_AppleTitle</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/MegaMenuOptions')</defaultValue>
+      <description></description>
+      <id>1ef00140-8ee7-4dd1-8b24-11ddf7027f26</id>
+      <masked>false</masked>
+      <name>options_megaMenu</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/items_AppleThumbnail')</defaultValue>
+      <description></description>
+      <id>d596f2ba-f99a-4be2-84d6-e10f5d889f91</id>
+      <masked>false</masked>
+      <name>items_AppleThumbnail</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/carts')</defaultValue>
+      <description></description>
+      <id>7a8b52c7-292b-4311-bd7f-677009964754</id>
+      <masked>false</masked>
+      <name>carts</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Mega Menu/text_cartCount')</defaultValue>
+      <description></description>
+      <id>099eb366-ec14-4e76-a200-0677bdf66c80</id>
+      <masked>false</masked>
+      <name>text_cartCount</name>
+   </variable>
+</TestCaseEntity>

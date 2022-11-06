@@ -17,8 +17,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
 
+import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.annotation.SetUp
 import com.kms.katalon.core.annotation.SetupTestCase
 import com.kms.katalon.core.annotation.TearDown
@@ -59,6 +60,8 @@ def setupTestCase() {
 def tearDownTestCase() {
 	// Put your code here.
 }
+
+
 
 /**
  * References:

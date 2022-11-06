@@ -20,6 +20,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 //Check page login page is loading
 WebUI.openBrowser('')
+WebUI.deleteAllCookies()
 WebUI.navigateToUrl(GlobalVariable.Url)
 condition_pageLoad = WebUI.waitForElementVisible(header_loginPage, 10, FailureHandling.OPTIONAL)
 if(condition_pageLoad)
