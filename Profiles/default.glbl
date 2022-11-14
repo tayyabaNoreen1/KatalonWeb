@@ -9,4 +9,9 @@
       <initValue>'https://ecommerce-playground.lambdatest.io/index.php?route=account/login'</initValue>
       <name>Url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>loggedIn</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

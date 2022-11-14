@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>text_cartCount</name>
+   <name>items_cartTable</name>
    <tag></tag>
-   <elementGuidId>924da6c0-2051-4d52-96ff-39298ddce286</elementGuidId>
+   <elementGuidId>c22f0f3c-4800-416f-87cd-a8cb6ac40cb6</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='entry_217825']/a[1]/div[1]/span[@class='badge badge-pill badge-info cart-item-total']</value>
+         <value>//div[@class='table-responsive']//tbody/tr/td[2]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

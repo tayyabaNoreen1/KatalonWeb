@@ -19,11 +19,19 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 //Check logout flow
-condition_logoutPresent = WebUI.verifyElementPresent(option_logout, 0, FailureHandling.OPTIONAL)
-if(condition_logoutPresent) {
-	KeywordUtil.logInfo('Logout option is present.')
-	WebUI.scrollToElement(option_logout, 5, FailureHandling.OPTIONAL)
-	WebUI.click(option_logout)
+//condition_logoutPresent = WebUI.verifyElementPresent(option_logout, 0, FailureHandling.OPTIONAL)
+condition_myAccountPresent = WebUI.verifyElementPresent(menu_myAccount, 5, FailureHandling.STOP_ON_FAILURE)
+condition_logoutPresent = WebUI.verifyElementPresent(menuOption_logout, 5, FailureHandling.OPTIONAL)
+
+if(condition_myAccountPresent) {
+	WebUI.mouseOver(menu_myAccount, FailureHandling.STOP_ON_FAILURE)
+	WebUI.delay(5)
+	if(condition_logoutPresent) {
+		KeywordUtil.logInfo('Logout option is present.')
+		WebUI.click(menuOption_logout)
+	}
+	//WebUI.scrollToElement(option_logout, 5, FailureHandling.OPTIONAL)
+	WebUI.delay(5)
 	condition_logoutSuccess = WebUI.waitForElementVisible(success_logout, 10, FailureHandling.OPTIONAL)
 	if(condition_logoutSuccess)
 		KeywordUtil.markPassed('User is logged out successfully.')

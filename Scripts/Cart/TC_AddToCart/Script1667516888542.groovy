@@ -13,6 +13,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.By as By
@@ -43,7 +44,7 @@ if (condition_menuApple) {
 	condition_pageApple = WebUI.waitForElementVisible(page_Apple, 10, FailureHandling.OPTIONAL)
 	if (condition_pageApple) {
 		KeywordUtil.logInfo('Apple product page opened successfully.')
-		
+		WebUI
 				List<WebElement> menuElementsText = WebUiCommonHelper.findWebElements(items_AppleTitle, 30)
 				List<WebElement> menuElementsThumbnail = WebUiCommonHelper.findWebElements(items_AppleThumbnail, 30)
 				List<WebElement> cartIcons = WebUiCommonHelper.findWebElements(carts, 30)
@@ -56,10 +57,33 @@ if (condition_menuApple) {
 						act.click(cartIcons.get(i)).build().perform()
 						String text = WebUI.getText(text_cartCount)
 						if(itemNeeded.size()==Integer.valueOf(text)) {
-							KeywordUtil.markPassed('All items added to cart')
+							KeywordUtil.logInfo('All items added to cart')
 							break;
 						}
 					}}
+				WebUI.click(button_cartPage)
+				condition_cartDrawer = WebUI.waitForElementVisible(cartDrawer, 10, FailureHandling.OPTIONAL)
+				if(condition_cartDrawer) {
+					KeywordUtil.logInfo('Cart drawer opened.')
+					if(WebUI.verifyElementVisible(button_editCart, FailureHandling.OPTIONAL)) {
+						WebUI.click(button_editCart)
+						if(WebUI.waitForElementVisible(breadcrumb_cartPage, 10, FailureHandling.OPTIONAL)) {
+							List<WebElement> tableCartItems = WebUiCommonHelper.findWebElements(items_cartTable, 30)
+							for(int j=0; j<tableCartItems.size(); j++) {
+								String text = tableCartItems.get(j).getText()
+								if (itemNeeded.contains(text)) {
+									KeywordUtil.logInfo("${text} is present in cart.")
+								}
+								else {
+									KeywordUtil.markFailedAndStop('Item is missing from cart')
+								}
+							}
+						}
+					}
+				}
+				else {
+					KeywordUtil.markFailed('Cart drawer is not opened')
+				}
 	}
 	else {
 	KeywordUtil.markFailedAndStop('Apple product page is not loaded.')

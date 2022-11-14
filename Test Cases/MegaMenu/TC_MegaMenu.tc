@@ -21,7 +21,13 @@
       <testDataLinkId></testDataLinkId>
       <type>DEFAULT</type>
       <value></value>
-      <variableId>a241abe9-52fb-44dc-96a3-bfcb62121cf1</variableId>
+      <variableId>8d6a9a3d-fe87-42a3-bd36-e96a3abd919c</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ba27efe0-9905-4750-96c8-d77294b76149</variableId>
    </variableLinks>
    <variable>
       <defaultValue>findTestObject('Mega Menu/MegaMenuButton')</defaultValue>
@@ -38,10 +44,17 @@
       <name>list_MegaMenu</name>
    </variable>
    <variable>
-      <defaultValue>0</defaultValue>
+      <defaultValue>['Apple', 'HTC', 'Apple', 'Canon', 'Apple', 'Nikon', 'Apple', 'Canon', 'HTC', 'HTC', 'Components', 'Printers', 'Mice and Trackballs', 'Mac', 'Monitors', 'Phones &amp; PDAs', 'Cameras', 'Apple', 'Desktops', 'Monitors', 'Mice and Trackballs', 'Mice and Trackballs', 'Printers', 'Components', 'Cameras', 'Components', 'Components', 'Web Cameras']</defaultValue>
       <description></description>
-      <id>a241abe9-52fb-44dc-96a3-bfcb62121cf1</id>
+      <id>8d6a9a3d-fe87-42a3-bd36-e96a3abd919c</id>
       <masked>false</masked>
-      <name>x</name>
+      <name>list_pageHeaders</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Brand Items/page_header')</defaultValue>
+      <description></description>
+      <id>ba27efe0-9905-4750-96c8-d77294b76149</id>
+      <masked>false</masked>
+      <name>page_header</name>
    </variable>
 </TestCaseEntity>

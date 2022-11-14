@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>carts</name>
+   <name>button_cartPage</name>
    <tag></tag>
-   <elementGuidId>0399c9b4-757c-4c3c-b135-ab4bf7ae273b</elementGuidId>
+   <elementGuidId>f13dc75c-74a4-4c04-b756-c30e70f0d77f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//i[@class='fas fa-shopping-cart']</value>
+         <value>//div[@id='entry_217825']//div[@class='icon svg-icon']//*[name()='svg']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

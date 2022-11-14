@@ -57,10 +57,13 @@ else
 	
 //Check successfull login
 condition_loginSuccess = WebUI.waitForElementVisible(header_myAccount, 10, FailureHandling.OPTIONAL)
-if(condition_loginSuccess)
+if(condition_loginSuccess) {
 	KeywordUtil.markPassed('Login flow is working.')
-else
+	GlobalVariable.loggedIn=true
+	}
+else {
 	KeywordUtil.markFailedAndStop('Login is not working.')
+	GlobalVariable.loggedIn=false}
 
 
 

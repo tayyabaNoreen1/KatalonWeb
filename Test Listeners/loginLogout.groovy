@@ -17,6 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 import com.kms.katalon.core.annotation.BeforeTestCase
 import com.kms.katalon.core.annotation.BeforeTestSuite
+import com.kms.katalon.core.annotation.TearDownTestCase
 import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.context.TestCaseContext
@@ -25,14 +26,17 @@ import com.kms.katalon.core.context.TestSuiteContext
 class loginLogout {
 
 	@BeforeTestSuite
-	def login() {
-		WebUI.callTestCase(findTestCase('Login/TC_Login'), [('username') : findTestData('usersLogin').getValue(1, 1), ('password') : findTestData('usersLogin').getValue(2, 1)], 
-    FailureHandling.STOP_ON_FAILURE)
+	def login(TestSuiteContext testSuiteContext) {
+		if(GlobalVariable.loggedIn!=true) {
+			WebUI.callTestCase(findTestCase('Login/TC_Login'), [('username') : findTestData('usersLogin').getValue(1, 1), ('password') : findTestData('usersLogin').getValue(2, 1)],
+				FailureHandling.STOP_ON_FAILURE)
+		}
 	}
 
 
-	@AfterTestSuite
-	def logout() {
-		WebUI.callTestCase(findTestCase('Login/TC_Logout'), null, FailureHandling.STOP_ON_FAILURE)
+	@AfterTestSuite 
+	def logout(TestSuiteContext testSuiteContext) {
+		if(testSuiteContext.getTestSuiteId()=='Test Suites/MegaMenu') {
+		WebUI.callTestCase(findTestCase('Login/TC_Logout'), null, FailureHandling.STOP_ON_FAILURE)}
 	}
 }

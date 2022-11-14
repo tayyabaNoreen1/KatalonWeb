@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>items_AppleThumbnail</name>
+   <name>text_cartCount</name>
    <tag></tag>
-   <elementGuidId>422bba91-d1f4-46f8-be12-73f7f1477703</elementGuidId>
+   <elementGuidId>924da6c0-2051-4d52-96ff-39298ddce286</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='product-thumb-top']</value>
+         <value>//div[@id='entry_217825']/a[1]/div[1]/span[@class='badge badge-pill badge-info cart-item-total']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

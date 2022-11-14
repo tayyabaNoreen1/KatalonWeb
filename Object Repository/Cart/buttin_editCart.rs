@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_cart</name>
+   <name>buttin_editCart</name>
    <tag></tag>
-   <elementGuidId>20353bdc-ed9f-4357-bfa0-7a13be19c824</elementGuidId>
+   <elementGuidId>d8071d2f-885a-4538-beb1-b4b69f88a6d2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class='product-thumb-top']//i[@class='fas fa-shopping-cart']</value>
+         <value>//a[@href='https://ecommerce-playground.lambdatest.io/index.php?route=checkout/cart']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

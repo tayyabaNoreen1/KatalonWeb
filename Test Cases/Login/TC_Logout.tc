@@ -17,6 +17,18 @@
       <value></value>
       <variableId>22507ac3-c3bf-49bb-a3b7-875043fbc01d</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>cb6a8574-8de2-44d1-a8c3-631d41c939cf</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>b677660a-d254-4665-b7e1-2181072b4ec6</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>findTestObject('UpdateUser/option_logout')</defaultValue>
       <description></description>
@@ -30,5 +42,19 @@
       <id>22507ac3-c3bf-49bb-a3b7-875043fbc01d</id>
       <masked>false</masked>
       <name>success_logout</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Logout/menu_myAccount')</defaultValue>
+      <description></description>
+      <id>cb6a8574-8de2-44d1-a8c3-631d41c939cf</id>
+      <masked>false</masked>
+      <name>menu_myAccount</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Logout/menuOption_logout')</defaultValue>
+      <description></description>
+      <id>b677660a-d254-4665-b7e1-2181072b4ec6</id>
+      <masked>false</masked>
+      <name>menuOption_logout</name>
    </variable>
 </TestCaseEntity>

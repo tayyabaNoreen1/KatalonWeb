@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>page_Apple</name>
+   <name>items_AppleThumbnail</name>
    <tag></tag>
-   <elementGuidId>fb5090a0-0f09-49d6-82ee-733f8c3591af</elementGuidId>
+   <elementGuidId>422bba91-d1f4-46f8-be12-73f7f1477703</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//h1[normalize-space()='Apple']</value>
+         <value>//div[@class='product-thumb-top']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

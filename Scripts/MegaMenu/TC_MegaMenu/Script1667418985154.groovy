@@ -30,16 +30,26 @@ List<WebElement> menuElements = WebUiCommonHelper.findWebElements(list_MegaMenu,
 for(int i=0; i<menuElements.size();i++) {
 	
 	WebUI.mouseOver(menu_MegaMenu, FailureHandling.STOP_ON_FAILURE)
-	WebUI.delay(5)
+	WebUI.delay(7)
 	String option = menuElements[i].getAttribute('title')
 	String expected = menuElements[i].getAttribute('href')
+	//System.out.println(menuElements.get(i))
 	menuElements.get(i).click()
 	WebUI.delay(5)
 	String current = WebUI.getUrl()
 	if(current == expected)
 		KeywordUtil.logInfo("Link for ${option} is correct")
-	WebUI.delay(2)
-	menuElements = WebUiCommonHelper.findWebElements(list_MegaMenu, 30)  //I get error if I dont do this step
+	String currentListHeader = list_pageHeaders[i]
+	if(WebUI.verifyElementText(page_header, currentListHeader, FailureHandling.OPTIONAL)) {
+		KeywordUtil.logInfo("Correct page ${currentListHeader} for ${option} is opened.")
+	}
+	WebUI.delay(5)
+//	WebUI.refresh()
+//	WebUI.delay(5)
+//	WebUI.mouseOver(menu_MegaMenu, FailureHandling.STOP_ON_FAILURE)
+//	WebUI.delay(2)
+	menuElements = WebUiCommonHelper.findWebElements(list_MegaMenu, 30) 
+	 //I get error if I dont do this step
 	//error is: 'Stale element reference: element is not attached to the page document.'
 }
 

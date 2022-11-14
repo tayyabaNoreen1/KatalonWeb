@@ -1,10 +1,10 @@
 {
-  "keywordFileContentHash": "991E0B20129F77BA84C49596E1DE2D42",
+  "keywordFileContentHash": "56C542CFF80E6A5AAE168D966E0523D8",
   "keywordClasses": [
     {
       "name": "loginLogout",
       "keywordMethods": []
     }
   ],
-  "javadocParsed": false
+  "javadocParsed": true
 }

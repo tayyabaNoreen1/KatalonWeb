@@ -53,6 +53,36 @@
       <value></value>
       <variableId>099eb366-ec14-4e76-a200-0677bdf66c80</variableId>
    </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>47de8fed-b52d-4b3d-b2b7-c4a3cf690a55</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4839ae5a-3f2b-43f1-9311-d634aec7697b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>349ddc6c-33ab-469b-8eab-970520afb8fe</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>37a8e425-29a5-4a51-a7dd-96abf17cb03b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>946efa7d-8273-447d-a10e-bbd006793146</variableId>
+   </variableLinks>
    <variable>
       <defaultValue>findTestObject('Mega Menu/MegaMenuButton')</defaultValue>
       <description></description>
@@ -68,14 +98,14 @@
       <name>menuOption_Apple</name>
    </variable>
    <variable>
-      <defaultValue>findTestObject('Mega Menu/page_Apple')</defaultValue>
+      <defaultValue>findTestObject('Brand Items/page_Apple')</defaultValue>
       <description></description>
       <id>516f4369-5e4a-45d1-b201-66d94fa8296d</id>
       <masked>false</masked>
       <name>page_Apple</name>
    </variable>
    <variable>
-      <defaultValue>findTestObject('Mega Menu/items_AppleTitle')</defaultValue>
+      <defaultValue>findTestObject('Brand Items/items_AppleTitle')</defaultValue>
       <description></description>
       <id>cbc6b592-c99e-4314-a749-a4840eb6e576</id>
       <masked>false</masked>
@@ -89,24 +119,59 @@
       <name>options_megaMenu</name>
    </variable>
    <variable>
-      <defaultValue>findTestObject('Mega Menu/items_AppleThumbnail')</defaultValue>
+      <defaultValue>findTestObject('Brand Items/items_AppleThumbnail')</defaultValue>
       <description></description>
       <id>d596f2ba-f99a-4be2-84d6-e10f5d889f91</id>
       <masked>false</masked>
       <name>items_AppleThumbnail</name>
    </variable>
    <variable>
-      <defaultValue>findTestObject('Mega Menu/carts')</defaultValue>
+      <defaultValue>findTestObject('Brand Items/carts')</defaultValue>
       <description></description>
       <id>7a8b52c7-292b-4311-bd7f-677009964754</id>
       <masked>false</masked>
       <name>carts</name>
    </variable>
    <variable>
-      <defaultValue>findTestObject('Mega Menu/text_cartCount')</defaultValue>
+      <defaultValue>findTestObject('Cart/text_cartCount')</defaultValue>
       <description></description>
       <id>099eb366-ec14-4e76-a200-0677bdf66c80</id>
       <masked>false</masked>
       <name>text_cartCount</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Cart/button_cartPage')</defaultValue>
+      <description></description>
+      <id>47de8fed-b52d-4b3d-b2b7-c4a3cf690a55</id>
+      <masked>false</masked>
+      <name>button_cartPage</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Cart/cartDrawer')</defaultValue>
+      <description></description>
+      <id>4839ae5a-3f2b-43f1-9311-d634aec7697b</id>
+      <masked>false</masked>
+      <name>cartDrawer</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Cart/buttin_editCart')</defaultValue>
+      <description></description>
+      <id>349ddc6c-33ab-469b-8eab-970520afb8fe</id>
+      <masked>false</masked>
+      <name>button_editCart</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Cart/breadcrumb_cartPage')</defaultValue>
+      <description></description>
+      <id>37a8e425-29a5-4a51-a7dd-96abf17cb03b</id>
+      <masked>false</masked>
+      <name>breadcrumb_cartPage</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestObject('Cart/items_cartTable')</defaultValue>
+      <description></description>
+      <id>946efa7d-8273-447d-a10e-bbd006793146</id>
+      <masked>false</masked>
+      <name>items_cartTable</name>
    </variable>
 </TestCaseEntity>
