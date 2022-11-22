@@ -19,14 +19,10 @@ import org.openqa.selenium.Keys as Keys
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 //Check page login page is loading
-WebUI.openBrowser('')
-WebUI.deleteAllCookies()
-WebUI.navigateToUrl(GlobalVariable.Url)
-condition_pageLoad = WebUI.waitForElementVisible(header_loginPage, 10, FailureHandling.OPTIONAL)
-if(condition_pageLoad)
-	KeywordUtil.logInfo('Login page loaded successfully.')
-else
-	KeywordUtil.markFailedAndStop('Login page is not loading.')
+
+if(GlobalVariable.homeLoaded != true) {
+	CustomKeywords.'Utility.homePageLoad'(header_loginPage)
+}
 
 //Check username field is present
 condition_usernamePresent = WebUI.verifyElementVisible(input_email, FailureHandling.OPTIONAL)	

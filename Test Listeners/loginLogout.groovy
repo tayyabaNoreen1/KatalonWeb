@@ -27,7 +27,7 @@ class loginLogout {
 
 	@BeforeTestSuite
 	def login(TestSuiteContext testSuiteContext) {
-		if(GlobalVariable.loggedIn!=true) {
+		if(GlobalVariable.loggedIn!=true&&testSuiteContext.getTestSuiteId()=='Test Suites/Cart') {
 			WebUI.callTestCase(findTestCase('Login/TC_Login'), [('username') : findTestData('usersLogin').getValue(1, 1), ('password') : findTestData('usersLogin').getValue(2, 1)],
 				FailureHandling.STOP_ON_FAILURE)
 		}

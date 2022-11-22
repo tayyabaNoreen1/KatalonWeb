@@ -71,14 +71,14 @@
       <name>input_email</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>findTestData('signUp').getValue(3, 2)</defaultValue>
       <description></description>
       <id>c9d197ce-0336-49a6-96e3-7439d8c02e23</id>
       <masked>false</masked>
       <name>username</name>
    </variable>
    <variable>
-      <defaultValue>''</defaultValue>
+      <defaultValue>findTestData('signUp').getValue(5, 2)</defaultValue>
       <description></description>
       <id>e120ca52-a952-45e9-bcda-b310919f9b05</id>
       <masked>false</masked>

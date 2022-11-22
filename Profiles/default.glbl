@@ -14,4 +14,9 @@
       <initValue>false</initValue>
       <name>loggedIn</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>false</initValue>
+      <name>homeLoaded</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

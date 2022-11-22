@@ -16,10 +16,26 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
-import internal.GlobalVariable
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 public class Utility {
+	
+	@Keyword
+	public void homePageLoad(TestObject header_loginPage) {
+		WebUI.openBrowser('')
+		WebUI.deleteAllCookies()
+		WebUI.maximizeWindow()
+		WebUI.navigateToUrl(GlobalVariable.Url)
+		boolean condition_pageLoad = WebUI.waitForElementVisible(header_loginPage, 10, FailureHandling.OPTIONAL)
+		if(condition_pageLoad) {
+			GlobalVariable.homeLoaded = true
+			KeywordUtil.logInfo('Home page loaded successfully.')
+		}
+		else
+			KeywordUtil.markFailedAndStop('Home page is not loading.')
+		
+	}
 
 	@Keyword
 	public void editProfile(TestObject button_editInfo) {

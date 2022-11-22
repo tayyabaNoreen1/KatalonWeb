@@ -26,7 +26,7 @@ import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
 import org.openqa.selenium.interactions.Actions as Actions
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.maximizeWindow()
+//WebUI.maximizeWindow()
 
 WebDriver driver = DriverFactory.getWebDriver()
 

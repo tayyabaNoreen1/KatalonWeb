@@ -28,6 +28,7 @@ if(condition_myAccountPresent) {
 	WebUI.delay(5)
 	if(condition_logoutPresent) {
 		KeywordUtil.logInfo('Logout option is present.')
+		WebUI.delay(5)
 		WebUI.click(menuOption_logout)
 	}
 	//WebUI.scrollToElement(option_logout, 5, FailureHandling.OPTIONAL)
