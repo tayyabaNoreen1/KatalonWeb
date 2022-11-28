@@ -14,7 +14,9 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
+
+import org.openqa.selenium.By as By
 import org.openqa.selenium.Keys as Keys
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
@@ -41,17 +43,26 @@ if(condition_menuOption) {
 		List<WebElement> claims = WebUiCommonHelper.findWebElements(claim, 30)
 		List<WebElement> itemTitles = WebUiCommonHelper.findWebElements(titles_items, 30)
 		List<String> itemsText = []
-		for(int i=0; i<claims.size(); i++) {
-			String percentageText = claims.get(i).getText().split('%')[0];
-			int percentageValue = Integer.parseInt(percentageText)
-			if(percentageValue > 40) {
-				itemsText.add(itemTitles.get(i).getText())
-				KeywordUtil.logInfo("${itemsText[i]} is added to list.")
-				act.moveToElement(itemThumbnails.get(i)).build().perform()
-				WebUI.delay(3)
-				act.click(cartIcons.get(i)).build().perform()
-				WebUI.delay(3)
+		int claimIndex = 0
+		for(int i=0; i<itemThumbnails.size(); i++) {
+			itemsText.add(itemTitles.get(i).getText())
+			if(itemThumbnails.get(i).findElements(By.className('claimed')).size()!=0){
+				KeywordUtil.logInfo("Claim is present for ${itemsText[i]}.")
+				String percentageText = claims[claimIndex].getText().split('%')[0]
+				int percentageValue = Integer.parseInt(percentageText)
+				if(percentageValue > 40) {
+					KeywordUtil.logInfo("${itemsText[i]} is added to list.")
+					act.moveToElement(itemThumbnails.get(i)).build().perform()
+					WebUI.delay(3)
+					act.click(cartIcons.get(i)).build().perform()
+					WebUI.delay(3)
+				}
+				claimIndex += 1
 			}
+			else {
+				KeywordUtil.logInfo("Claim not present for ${itemsText[i]}.")
+			}
+			
 		}
 		WebUI.click(button_cartPage)
 		condition_cartDrawer = WebUI.waitForElementVisible(cartDrawer, 10, FailureHandling.OPTIONAL)
