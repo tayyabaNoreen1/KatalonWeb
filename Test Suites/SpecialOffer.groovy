@@ -17,13 +17,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 
-import internal.GlobalVariable
+import internal.GlobalVariable as GlobalVariable
 
-import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.annotation.SetUp
 import com.kms.katalon.core.annotation.SetupTestCase
 import com.kms.katalon.core.annotation.TearDown
 import com.kms.katalon.core.annotation.TearDownTestCase
+
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
@@ -49,7 +49,7 @@ def setUp() {
  */
 @TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def clearCart() {
-	condition_removeFromCart = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart/button_removeFromCart'), 0, FailureHandling.OPTIONAL)
+	boolean condition_removeFromCart = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart/button_removeFromCart'), 0, FailureHandling.OPTIONAL)
 	if(condition_removeFromCart) {
 		KeywordUtil.logInfo('Remove from cart button is present')
 		List<WebElement> removeButtons = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Cart/button_removeFromCart'), 30)
@@ -74,9 +74,6 @@ def setupTestCase() {
 def tearDownTestCase() {
 	// Put your code here.
 }
-
-
-
 
 /**
  * References:

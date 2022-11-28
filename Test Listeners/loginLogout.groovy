@@ -27,7 +27,7 @@ class loginLogout {
 
 	@BeforeTestSuite
 	def login(TestSuiteContext testSuiteContext) {
-		if(GlobalVariable.loggedIn!=true&&testSuiteContext.getTestSuiteId()=='Test Suites/Cart') {
+		if((GlobalVariable.loggedIn!=true)&&(testSuiteContext.getTestSuiteId()=='Test Suites/Cart'||testSuiteContext.getTestSuiteId()=='Test Suites/SpecialOffer')) {
 			WebUI.callTestCase(findTestCase('Login/TC_Login'), [('username') : findTestData('usersLogin').getValue(1, 1), ('password') : findTestData('usersLogin').getValue(2, 1)],
 				FailureHandling.STOP_ON_FAILURE)
 		}
@@ -36,7 +36,7 @@ class loginLogout {
 
 	@AfterTestSuite 
 	def logout(TestSuiteContext testSuiteContext) {
-		if(testSuiteContext.getTestSuiteId()=='Test Suites/MegaMenu') {
+		if(testSuiteContext.getTestSuiteId()=='Test Suites/MegaMenu'||testSuiteContext.getTestSuiteId()=='Test Suites/SpecialOffer') {
 		WebUI.callTestCase(findTestCase('Login/TC_Logout'), null, FailureHandling.STOP_ON_FAILURE)}
 	}
 }
