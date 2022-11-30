@@ -24,6 +24,16 @@ import com.kms.katalon.core.annotation.SetupTestCase
 import com.kms.katalon.core.annotation.TearDown
 import com.kms.katalon.core.annotation.TearDownTestCase
 
+import org.openqa.selenium.By as By
+import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebElement as WebElement
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import com.kms.katalon.core.webui.common.WebUiCommonHelper as WebUiCommonHelper
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.chrome.ChromeDriver as ChromeDriver
+import org.openqa.selenium.interactions.Actions as Actions
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+
 /**
  * Some methods below are samples for using SetUp/TearDown in a test suite.
  */
@@ -41,7 +51,7 @@ def setUp() {
  */
 @TearDown(skipped = false) // Please change skipped to be false to activate this method.
 def clearCart() {
-	condition_removeFromCart = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart/button_removeFromCart'), 0, FailureHandling.OPTIONAL)
+	boolean condition_removeFromCart = WebUI.verifyElementPresent(findTestObject('Object Repository/Cart/button_removeFromCart'), 0, FailureHandling.OPTIONAL)
 	if(condition_removeFromCart) {
 		KeywordUtil.logInfo('Remove from cart button is present')
 		List<WebElement> removeButtons = WebUiCommonHelper.findWebElements(findTestObject('Object Repository/Cart/button_removeFromCart'), 30)

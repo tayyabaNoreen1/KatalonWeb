@@ -61,28 +61,36 @@ if (condition_menuApple) {
 							break;
 						}
 					}}
-				WebUI.click(button_cartPage)
-				condition_cartDrawer = WebUI.waitForElementVisible(cartDrawer, 10, FailureHandling.OPTIONAL)
-				if(condition_cartDrawer) {
-					KeywordUtil.logInfo('Cart drawer opened.')
-					if(WebUI.verifyElementVisible(button_editCart, FailureHandling.OPTIONAL)) {
-						WebUI.click(button_editCart)
-						if(WebUI.waitForElementVisible(breadcrumb_cartPage, 10, FailureHandling.OPTIONAL)) {
-							List<WebElement> tableCartItems = WebUiCommonHelper.findWebElements(items_cartTable, 30)
-							for(int j=0; j<tableCartItems.size(); j++) {
-								String text = tableCartItems.get(j).getText()
-								if (itemNeeded.contains(text)) {
-									KeywordUtil.logInfo("${text} is present in cart.")
+				condition_cartPageButton = WebUI.waitForElementVisible(button_cartPage, 10, FailureHandling.OPTIONAL)
+				if(condition_cartPageButton) {
+					WebUI.click(button_cartPage)
+					condition_cartDrawer = WebUI.waitForElementVisible(cartDrawer, 10, FailureHandling.OPTIONAL)
+					if(condition_cartDrawer) {
+						KeywordUtil.logInfo('Cart drawer opened.')
+						if(WebUI.verifyElementVisible(button_editCart, FailureHandling.OPTIONAL)) {
+							WebUI.click(button_editCart)
+							if(WebUI.waitForElementVisible(breadcrumb_cartPage, 10, FailureHandling.OPTIONAL)) {
+								List<WebElement> tableCartItems = WebUiCommonHelper.findWebElements(items_cartTable, 30)
+								for(int j=0; j<tableCartItems.size(); j++) {
+									String text = tableCartItems.get(j).getText()
+									if (itemNeeded.contains(text)) {
+										KeywordUtil.logInfo("${text} is present in cart.")
+									}
+									else {
+										KeywordUtil.markFailedAndStop('Item is missing from cart')
+									}
 								}
-								else {
-									KeywordUtil.markFailedAndStop('Item is missing from cart')
-								}
+								KeywordUtil.markPassed('Selected items are present in cart.')
 							}
 						}
 					}
+					else {
+						KeywordUtil.markFailed('Cart drawer is not opened.')
+					}
 				}
+				
 				else {
-					KeywordUtil.markFailed('Cart drawer is not opened')
+					KeywordUtil.markFailed('Cart page button is missing.')
 				}
 	}
 	else {
