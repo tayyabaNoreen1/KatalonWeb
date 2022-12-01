@@ -20,7 +20,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 public class Utility {
-	
+
 	@Keyword
 	public void homePageLoad(TestObject header_loginPage) {
 		WebUI.openBrowser('')
@@ -34,7 +34,6 @@ public class Utility {
 		}
 		else
 			KeywordUtil.markFailedAndStop('Home page is not loading.')
-		
 	}
 
 	@Keyword

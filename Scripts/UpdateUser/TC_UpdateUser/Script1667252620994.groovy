@@ -22,13 +22,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 //Check Edit info option present.
 CustomKeywords.'Utility.editProfile'(button_editInfo)
-//condition_editInfoPresent = WebUI.verifyElementVisible(button_editInfo, FailureHandling.OPTIONAL)
-//if(condition_editInfoPresent) {
-//	KeywordUtil.logInfo('Edit info button is present.')
-//	WebUI.click(button_editInfo)
-//}
-//else
-//	KeywordUtil.markFailedAndStop('Edit info button is missing.')
 	
 //Check Edit info page loaded
 condition_editInfoPageLoad = WebUI.waitForElementVisible(header_editInfo, 10, FailureHandling.OPTIONAL)
@@ -93,13 +86,6 @@ if(condition_successMessageVisible) {
 		KeywordUtil.markError('Success message text is incorrect.')
 		
 	CustomKeywords.'Utility.editProfile'(button_editInfo)
-	
-//	if(condition_editInfoPresent) {
-//		KeywordUtil.logInfo('Edit info button is present.')
-//		WebUI.click(button_editInfo)
-//	}
-//	else
-//		KeywordUtil.markFailedAndStop('Edit info button is missing.')
 	
 	condition_firstNameMatch = WebUI.verifyElementAttributeValue(input_firstName, 'value', firstName, 0, FailureHandling.OPTIONAL)
 	condition_lastNameMatch = WebUI.verifyElementAttributeValue(input_lastName, 'value', lastName, 0, FailureHandling.OPTIONAL)

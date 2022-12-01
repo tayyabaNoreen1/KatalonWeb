@@ -31,7 +31,6 @@ if(condition_myAccountPresent) {
 		WebUI.delay(5)
 		WebUI.click(menuOption_logout)
 	}
-	//WebUI.scrollToElement(option_logout, 5, FailureHandling.OPTIONAL)
 	WebUI.delay(5)
 	condition_logoutSuccess = WebUI.waitForElementVisible(success_logout, 10, FailureHandling.OPTIONAL)
 	if(condition_logoutSuccess)
